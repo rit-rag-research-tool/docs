@@ -18,10 +18,17 @@ we could use many collections, but i dont like this, i think using a unified vec
 
 
 https://blog.voyageai.com/2024/11/12/voyage-multimodal-3/
+https://docs.voyageai.com/reference/multimodal-embeddings-api
 
 
-text, slides, photos, pdf --> embeding 
-video, audio gemini 1.5 flash --> text --> embeding 
+text --> embeding 
+
+photos, gif --> (2.0 flash for discription) text image pair --> embeding
+
+slides, pdf --> photos --> (2.0 flash for discription) text --> embeding (as a image pair)
+  |------|----> Rip any text we can find --> embeding           for the silde/pdf image and text embedings we genrate we set the other embedings ad context in the metadate so if only one show up we sill pull down bot text and photo data 
+
+video, audio gemini (2.0 flash for transscription) --> text --> embeding
 
 
 https://github.com/minio/minio/tree/master/docs/orchestration/docker-compose
